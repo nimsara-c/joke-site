@@ -1,0 +1,113 @@
+:root{
+    --form-color: white;
+    --text-color: black;
+    --btn-color: purple;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /*width: 100%;*/
+}
+
+body{
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.heading{
+    justify-self: center;
+    padding: 20px;
+}
+
+.heading h1{
+    place-self: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5rem;
+    justify-self: center;
+    text-align: center;
+}
+
+.joke-card{
+    background-color: purple;
+    width: 60%;
+    height: 50%;
+    align-self: center;
+    justify-self: center;
+    padding: 30px;
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-rows: 2fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.joke-card h3{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    place-self: center;
+    justify-content: center;
+
+    color: var(--form-color);
+}
+
+.category-select{
+    display: flex;
+    align-items: center;
+}
+
+.category-select select{
+    padding: 10px;
+    padding-right: 20px;
+    background-color: purple;
+    border-radius: 10px;
+    color: white;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-select select option{
+    background-color: purple;
+    border-radius: 20px;
+    color: white;
+}
+
+#question, #answer{
+    color: black;
+    grid-column: 1 / span 2;
+    text-align: center;
+    font-size: 30px;
+}
+
+#answer {
+    align-self: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 750px) {
+    body {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 50vh 50vh;
+    }
+
+    .joke-card{
+        align-self: start;
+        width: 70%;
+        height: 70%;
+    }
+
+    #question, #answer{
+        font-size: 24px;
+    }
+}
