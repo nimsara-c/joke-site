@@ -14,7 +14,6 @@ app.get("/", async (req, res) => {
         question: response.data.setup,
         answer: response.data.punchline
     });
-    console.log(DeviceInfo.getBaseOs.name);
 
 });
 

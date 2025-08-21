@@ -28,7 +28,8 @@ body{
 
 .heading h1{
     place-self: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Quicksand", Courier, monospace;
+    font-weight: 700;
     font-size: 5rem;
     justify-self: center;
     text-align: center;
@@ -36,18 +37,19 @@ body{
 
 .joke-card{
     background-color: purple;
+    border-width: 10px;
+    border-color: black;
+
     width: 60%;
     height: 50%;
     align-self: center;
     justify-self: center;
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
 
     display: grid;
     grid-template-rows: 2fr 2fr 1fr;
     grid-template-columns: 1fr 1fr;
-
-    font-family: 'Courier New', Courier, monospace;
 }
 
 .joke-card h3{
@@ -58,11 +60,16 @@ body{
     justify-content: center;
 
     color: var(--form-color);
+
+    font-family: "Quicksand", Courier, monospace;
+    font-weight: 100;
 }
+
 
 .category-select{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .category-select select{
@@ -71,7 +78,7 @@ body{
     background-color: purple;
     border-radius: 10px;
     color: white;
-    width: 50%;
+    width: 80%;
     align-items: center;
     justify-content: center;
 }
@@ -82,11 +89,30 @@ body{
     color: white;
 }
 
+
 #question, #answer{
+    margin-top: 10px;
     color: black;
     grid-column: 1 / span 2;
     text-align: center;
     font-size: 30px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#question::-webkit-scrollbar , #answer::-webkit-scrollbar{
+    width: 5px;
+}
+
+#question::-webkit-scrollbar-thumb , #answer::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 5px;
+}
+
+#question::-webkit-scrollbar-track , #answer::-webkit-scrollbar-track {
+    background: rgb(205, 55, 205);
+    border-radius: 5px;
 }
 
 #answer {
@@ -98,12 +124,12 @@ body{
     body {
         display: grid;
         grid-template-columns: 100vw;
-        grid-template-rows: 50vh 50vh;
+        grid-template-rows: 30vh 70vh;
     }
 
     .joke-card{
         align-self: start;
-        width: 70%;
+        width: 80%;
         height: 70%;
     }
 
