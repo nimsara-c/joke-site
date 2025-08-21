@@ -66,6 +66,9 @@ body{
     display: grid;
     grid-template-rows: 1fr 1fr;
 
+    padding-left: 5px;
+    padding-right: 5px;
+
     overflow: auto;
 }
 
@@ -83,25 +86,45 @@ body{
     border-radius: 5px;
 }
 
-.category-select{
-    display: flex;
+.cta{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     align-items: center;
-    justify-content: center;
+    justify-items: center;
+
+    font-family: "Quicksand", Courier, monospace;
+    font-weight:500;
 }
 
-.category-select select{
+.cta button{
+    background-color: white;
+    color: purple;
+    border-radius: 10px;
+    font-family: "Quicksand", Courier, monospace;
+    font-weight:500;
+
+    width: 60%;
+    height: 60%;
+
+    align-self: center;
+    justify-self: center;
+}
+
+.cta select{
     padding: 10px;
     padding-right: 20px;
     background-color: purple;
     border-radius: 10px;
     color: white;
     width: 80%;
+    height: 50%;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.category-select select option{
+.cta select option{
     background-color: purple;
     border-radius: 20px;
     color: white;
