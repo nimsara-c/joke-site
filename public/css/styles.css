@@ -123,12 +123,16 @@ body{
     justify-content: center;
 }
 
+
 .cta select option{
     background-color: purple;
     border-radius: 20px;
     color: white;
 }
 
+.cta select:hover, .cta select option:hover{
+    cursor: pointer;
+}
 
 #question, #answer{
     margin-top: 10px;
